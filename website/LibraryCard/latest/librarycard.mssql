@@ -1,0 +1,300 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.4deb1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Feb 23, 2017 at 10:56 AM
+-- Server version: 5.7.17-0ubuntu0.16.10.1
+-- PHP Version: 7.0.15-0ubuntu0.16.10.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `librarycard`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books`
+--
+
+CREATE TABLE `books` (
+  `bookID` int(11) NOT NULL,
+  `ISBN` varchar(100) DEFAULT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `author` varchar(200) DEFAULT NULL,
+  `genre` varchar(100) DEFAULT NULL,
+  `pageCount` int(11) DEFAULT NULL,
+  `bookCondition` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`bookID`, `ISBN`, `title`, `author`, `genre`, `pageCount`, `bookCondition`) VALUES
+(1, '978-0-446-56740-4', 'Rich Dad, Poor Dad', 'Robert, Kiyosaki', 'Finance', 259, NULL),
+(2, '978-1-285-85275-1', 'C++ Programming Program Design Including Data Structures', 'D. S. Malik', 'Computer Science', 1680, 'Poor'),
+(3, '978-0-470-62470-8', 'Fundamentals of Database Management Systems', 'Mark Gillenson', 'Computer Science', 395, 'Good'),
+(12, '0-07-322034-5', 'Object-Oriented Software Engineer', 'Timothy C. Lethbridge, Robert Laganiere', 'Computer Science', 533, 'Good'),
+(13, '978-0-470-93919-2', 'Project Management JumpStart, 3rd Edition', 'Kim Heldman', 'Management', 332, 'Good'),
+(14, '978-0-312-55641-1', 'Literature and Its Writers, Fifth Edition', 'Ann Charters, Samuel Charters', 'English', 1763, 'Fair'),
+(15, '978-1-285-73928-1', 'Psychology - Modules for Active Learning, Thirteenth Edition', 'Dennis Coon, John O. Mitterer', 'Psychology', 697, 'New'),
+(16, '978-0-596-15448-6', 'Linux in a Nutshell - A Desktop Quick Reference, 6th Edition', 'Ellen Siever, Stephen Figgins, Robert Love, Arnold Robbins', 'System Administration, Linux', 917, 'New'),
+(17, '0-13-091449-5', 'Computer Networks and Internets with Internet Applications, Third Edition', 'Douglas E. Comer', 'Computer Science', 683, 'New'),
+(18, '0-13-091957-8', 'Computers - Tools for an Information Age, Edition 7', 'H.L. Capron, J.A. Johnson', 'Computer Science', 623, 'Good'),
+(19, '0-07-295886-3', 'Database System Concepts, Fifth Edition', 'Silberschatz, Korth, Sudarshan', 'Database Systems', 1142, 'Good'),
+(20, '0-425-09772-2', 'Fatherhood', 'Bill Cosby', 'English', 178, NULL),
+(21, '0-13-093021-0', 'Computers - Tools for an Information Age, Edition 7 - Instructors Manual', 'H.L. Capron, J.A. Johnson', 'Computer Science', 338, 'New'),
+(22, '0-13-145692-X', 'Data Communications From Basics to Broadband, Fourth Edition', 'William J. Beyda', 'Database Systems', 379, 'Good'),
+(23, '0-321-45536-3', 'Introduction to Automata Theory, Languages, and Computation, Third Edition', 'John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman', 'Computer Science', 535, 'New'),
+(24, '0-87352-986-3', 'MLA Handbook for Writers of Research Papers Sixth Edition', 'Joseph Gibaldi', 'English', 361, NULL),
+(25, '0-87352-986-3', 'MLA Handbook for Writers of Research Papers Sixth Edition', 'Joseph Gibaldi', 'English', 361, NULL),
+(26, '0-87352-986-3', 'MLA Handbook for Writers of Research Papers Sixth Edition', 'Joseph Gibaldi', 'English', 361, NULL),
+(27, '978-0-7637-7646-6', 'Computer Science Illuminated, Fourth Edition', 'Nell Dale, John Lewis', 'Computer Science', 643, 'New'),
+(28, '1-931841-94-2', 'Data Structures For Game Programmers', 'Ron Penton', 'Database Systems', 930, 'Good'),
+(29, '978-0-7637-4149-5', 'Computer Science Illuminated, Third Edition', 'Nell Dale, John Lewis', 'Computer Science', 636, 'Good'),
+(30, '1-57922-013-4', 'Thinking About Teaching And Learning', 'Robert Leamnson', 'English', 169, NULL),
+(31, '0-387-00163-8', 'Programming Challenges, The Programming Contest Training Manual', 'Steven S. Skiena, Miguel A. Revilla', 'Computer Science', 359, 'New'),
+(32, '0-13-030418-2', 'A Managers Guide to Database Technology Building And Purchasing Better Applications', 'Michael R. Blaha', 'Database Systems', 250, 'Good'),
+(33, '978-0-385-49081-8', 'The Handmaids Tale', 'Margaret Atwood', 'English', 311, NULL),
+(34, '0-534-38913-9', 'Introduction to Scientific Computation and Programming', 'Daniel t. Kaplan', 'Computer Science', 546, 'Fair'),
+(35, '978-1-4496-7284-3', 'Computer Science Illuminated, Fifth Edition', 'Nell Dale, John Lewis', 'Computer Science', 665, 'New'),
+(36, '978-1-449-35626-2', 'Graph Databases', 'Ian Robinson, Jim Webber, Emil Eifrem', 'Database Systems', 208, 'Good'),
+(38, '0-07-027355-3', 'Computer Architecture and Organization, Third Edition', 'John P. Hayes', 'Computer Science', 604, 'New'),
+(39, '978-1-60810-150-4', 'Seven Choices for Success and Significance', 'Nido R. Qubein', 'English', 95, NULL),
+(40, '007-124046-2', 'Object-Oriented Technology from Diagram to Code with Visual PAradigm for UML', 'Curtis HK Tsang, Clarence SW Lau, Ying K Leung', 'Computer Science', 445, 'New'),
+(41, '1-4209-2252-1', 'Roberts Rules of Order', 'Henry Robert', 'English', 74, NULL),
+(42, '0-321-22838-3', 'Database Systems An Application-Oriented Approach, Second Edition', 'Michael Kifer, Arthur Bernstein, Philip M. Lewis', 'Database Systems', 666, 'Good'),
+(43, '0-201-76031-2', 'An Introduction to Object-Oriented Programming, Third Edition', 'Timothy Budd', 'Computer Science', 611, 'Good'),
+(44, '0-312-41262-2', 'A Writers Reference, Fifth Edition', 'Diana Hacker ', 'English', 465, NULL),
+(45, '978-1-4496-2634-1', 'Principles of Modern Operating Systems, Second Edition', 'Jose M. Garrido, Richard Schlesinger, Kenneth Hoganson', 'Computer Science', 563, 'New'),
+(46, '0-13-646621-4', 'Systems Analysis And Design, Fourth Edition', 'Kendall, Kendall', 'Software Engineering', 903, 'Good'),
+(47, '0-07-322034-5', 'Object-Oriented Software Engineering - Practical Software Development using UML and Java, Second Edition', 'Timothy C. Lethbridge, Robert Laganiere', 'Computer Science', 533, 'New'),
+(48, '0-201-36122-1', 'Data Structures & Algorithm Analysis in C++, Second Edition', 'Mark Allen Weiss', 'Computer Science', 588, 'New'),
+(49, '0-7637-1422-4', 'An Introduction to Formal Languages and Automata, Third Edition', 'Peter Linz', 'Computer Science', 410, 'New'),
+(50, '0-07-23200-4', 'Introduction to Languages and the Theory of Computation, Third Edition', 'John Martin', 'Computer Science', 543, 'New'),
+(51, '0-8053-0604-8', 'Software Engineering With Ada, Second Edition', 'Grady Booch', 'Software Engineering', 580, 'Good'),
+(52, '0-7637-0799-6', 'Computer Science Illuminated, Second Edition', 'Nell Dale, John Lewis', 'Computer Science', 699, 'Good'),
+(53, '0-7637-0799-6', 'Computer Science Illuminated, Second Edition', 'Nell Dale, John Lewis', 'Computer Science', 699, 'New'),
+(54, '0-7637-0799-6', 'Computer Science Illuminated, Second Edition', 'Nell Dale, John Lewis', 'Computer Science', 699, 'New'),
+(55, '0-13-047381-2', 'Extreme Software Engineering A Hands-On Approach', 'Daniel H. Steinberg, Daniel W. Palmer', 'Software Engineering', 273, 'Good'),
+(56, '0-7637-2624-9', 'Computer Science Illuminated, Second Edition - Student Lecture Companion', 'Nell Dale, John Lewis', 'Computer Science', 213, 'New'),
+(57, '9781430238881', 'Meet the Kinect - An Introduction to Programming Natural User Interfaces', 'Sean Kean, Jonathan Hall, and Phoenix Perry', 'Software', 205, 'New'),
+(58, '0-321-41013-0', 'Introduction to Software Engineering Design Processes, Principles, and Patterns with UML2', 'Christopher Fox', 'Software Engineering', 706, 'Good'),
+(59, '0-7357-0012-5', 'Tesp Prep MCSE - Windows NT Server 4, Second Edition', 'William J. Anderson, R. Andrew Brice, William N. Matsoukas, Michael Lane Thomas', 'Software', 391, 'New'),
+(60, '0-7645-7675-5', 'Mac OS X Tiger for Dummies', 'Bob "Dr. Mac" LeVitus', 'Software', 414, 'Good'),
+(61, '978-0-321-31379-9', 'Software Engineering 8', 'Sommerville', 'Software Engineering', 840, 'Fair'),
+(62, '0-9755787-6-6', 'Learning Matlab 7', '', 'Software', 0, 'Good'),
+(63, '1-904811-80-9', 'Drupal - Creating Blogs, Forums, Portals, and Community Websites', 'David Mercer', 'Software', 267, 'New'),
+(64, '0-201-56529-3', 'Software Engineering, Fourth Edition', 'Ian Sommerville', 'Software Engineering', 649, 'Good'),
+(65, '978-0-8400-3378-9', 'Contemporary Moral Problems', 'James E. White', 'Misc.', 536, 'Poor'),
+(66, '0-7506-6076-7', 'An Introduction to Web Matrix - ASP.NET Development for Beginners', 'Colin Hardy, Simon Stobart', 'Software', 308, 'New'),
+(67, '978-1-59059-755-2', 'Pro Drupal Development', 'John K. VanDyk, Matt Westgate', 'Software', 428, 'New'),
+(68, '0-321-33626-7', 'Dreamweaver 8 - Training from the Source', 'Khristine Annwn Page', 'Software', 590, 'New'),
+(69, '0-7357-0012-5', 'Introduction to Software Engineering Design Processes, Principles, and Patterns with UML2', 'William J. Anderson, R. Andrew Brice, William N. Matsoukas, Michael Lane Thomas', 'Software Engineering', 706, 'Good'),
+(70, '978-0-470-37629-4', 'Generation on a Tightrope', 'Arthur Levine, Diane R. Dean', 'Misc.', 227, 'New'),
+(71, '0-07-286551-2', 'Object-Oriented & Classical Software Engineering, Sixth Edition', 'Stephen R. Schach', 'Software Engineering', 581, 'Good'),
+(72, '978-0-06-273100-5', 'The Cartoon Guide to Physics', 'Larry Gonick, Art Huffman', 'Physics', 212, 'New'),
+(73, '978-0-06-273100-5', 'The Cartoon Guide to Physics', 'Larry Gonick, Art Huffman', 'Physics', 212, 'New'),
+(74, '0-201-42300-6', 'System Software An Introduction to Systems Programming, 3rd Edition', 'Leland L. Beck', 'Software Engineering', 519, 'Good'),
+(75, '0-471-35846-0', 'Testing Computer Software, Second Edition', 'Cem Kaner, Jack Falk, Hung Quoc Nguyen', 'Software Engineering', 480, 'Fair'),
+(76, '0-534-40842-7', 'Physics for Scientists and Engineers, Sixth Edition', 'Serway Jewett', 'Physics', 1281, 'New'),
+(77, '0-13-820432-2', 'Fundamental of Software Engineering', 'Carlo Ghezzi, Mehdi Jazayeri, Dino Mandrioli', 'Software Engineering', 573, 'Fair'),
+(78, '0-13-065302-0', 'Electronic Commerce - A Managerial Perspective', 'Efraim Turban, David King, Jae Lee, Merrill Warkentin, H. Michael Chung', 'Commerce', 914, 'New'),
+(79, '0-201-74130-X', 'Building Electronic Commerce with Web Database Constructions', 'Anne Nelson, William H. M. Nelson III', 'Commerce', 582, 'New'),
+(80, '978-0-07-352333-0', 'Object-Oriented Software Engineering', 'Stephen R. Schach', 'Software Engineering', 558, 'Good'),
+(81, '0-13-027782-7', 'Understanding Financial Statements, Sixth Edition', 'Lyn M. Fraser, Aileen Ormiston', 'Commerce', 267, 'New'),
+(82, '0-07-050814-3', 'Software Engineering A Practitioners Approach, Third Edition', 'Roger S. Pressman', 'Software Engineering', 793, 'Fair'),
+(83, '978-0-390-12498-2', 'Macro/Micro Economics', 'Indiana Institute of Technology', 'Economics', 784, 'Fair'),
+(84, '978-0-307-47653-1', 'Damned', 'Chuck Palahniuk', 'Misc.', 247, 'New'),
+(85, '978-0-470-93919-2', 'Project Management JumpStart, 3rd Edition', 'Kim Heldman', 'Project Management', 332, 'Fair'),
+(86, '0-9754810-3-7', 'A View from the Roof', 'Calvin Mackie, Ph.D', 'Misc.', 138, 'New'),
+(87, '0-07-298301-9', 'Business Driven Technology', 'Stephen Haag, Paige Baltzan, Amy Philips', 'Business', 557, 'New'),
+(88, '0-324-27252-9', 'The Future of Business', 'Lawrence J. Gitman, Carl McDaniel', 'Business', 788, 'New'),
+(89, '978-0-307-47747-7', 'A Visit from the Goon Squad', 'Jennifer Egan', 'Misc.', 340, 'Good'),
+(90, '1-59139-563-1', 'Resonant Leadership', 'Richard Boyatzis, Annie McKee', 'Project Management', 286, 'Good'),
+(91, '0-13-064636-9', 'Managing Information Technology, Fourth Edition', 'E. Wainright Martin, Carol V. Brown, Daniel W. DeHayes, Jeffrey A. Hoffer, William C. Perkins', 'Business', 761, 'New'),
+(92, '0-324-07168-X', 'Successful Project Management, Second Edition', 'Gido, Clements', 'Project Management', 459, 'Good'),
+(93, '0-7879-1058-9', 'The Courage to Teach', 'Parker J. Palmer', 'Misc.', 201, 'Good'),
+(94, '0-471-39203-0', 'Information Technology Project Management - Providing Measurable Organizational Value', 'Jack T. Marchewka', 'Project Management', 319, 'New'),
+(95, '0-13-095309-1', 'Practical Project Management', 'R. G. Ghattas, Sandra L. McKee', 'Project Management', 294, 'Fair'),
+(96, '0-256-16221-2', 'Introduction to Information Systems - An End User/Enterprise Perspective, Alternate Edition', 'James A. Obrien', 'Information Systems', 525, 'New'),
+(97, '978-1-55753-434-7', 'The Impact of Tablet PCs and Pen-based Technology on Education', 'Dave A. Berque, Jane C. Prey, Robert H. Reed', 'Misc.', 200, 'New'),
+(98, '0-13-089009-X', 'Business and Information Systems, Second Edition - Instructors Manual', 'Robert C. Nickerson, Robert Kachur', 'Information Systems', 205, 'Good'),
+(99, '978-0-618-61034-1', 'Campus Companion', 'Dr. Jennifer L, Hurd', 'Misc.', 157, 'Good'),
+(100, '0-13-08949606', 'Business and Information Systems', 'Robert C. Nickerson', 'Information Systems', 494, 'New'),
+(101, '978-0-13-312807-9', 'Games & Graphics in C++, 2nd Edition', 'Tony Gaddis', 'Gaming', 575, 'Good'),
+(102, '978-1-121-81976-4', 'University Experience, ITT 1000', 'Indiana Institute of Technology', 'Misc.', 240, 'Good'),
+(103, '0-13-122706-8', 'Patterns of Problem Solving, Second Edition', 'Moshe F. Rubinstein, Iris R. Firstenberg', 'Mathematics', 500, 'New'),
+(104, '9781475058185', 'A Newbies Guide to Developing an iPhone Game App', '', 'Gaming', 138, 'Good'),
+(105, '0-471-47244-1', 'Calculus, Eighth Edition', 'Howard Anton, Irl Bivens, Stephen Davis', 'Mathematics', 1187, 'Good'),
+(106, '978-0-534-26277-8', 'Case Studies ', 'John Riesen, John Szarlan, Suman Singha', 'Misc.', 87, 'Good'),
+(107, '0-9755787-7-4', 'Learning Simulink 6', '', 'Software', 0, 'Good'),
+(108, '0-9755787-6-6', 'Learning Matlab 7', '', 'Software', 0, 'New'),
+(109, '1-59200-383-4', 'Game Programming All In One, 2nd Edition', 'Jonathan S. Harbour', 'Gaming', 712, 'Good'),
+(110, '978-0-393-06275-5', 'The Marketplace of Ideas', 'Louis Menand', 'Misc.', 174, 'Good'),
+(111, '978-1-133-11087-3', 'Elementary Linear Algebra, Seventh Edition', 'Ron Larson', 'Mathematics', 390, 'Good'),
+(112, '978-0-262-03370-1', 'Digital Culture, Play, and Identity ', 'Hilde G. Corneliussen, Jill Walker Rettberg', 'Misc.', 304, 'New'),
+(113, '1-58450-049-2', 'Game Programming Gems', 'Mark DeLoura', 'Gaming', 614, 'Good'),
+(114, '978-0-486-48368-9', 'A First Course in Graph Theory', 'Gary Chartrand, Ping Zhang', 'Mathematics', 450, 'New'),
+(115, '978-0-470-10877-2', 'Matlab - An Introduction with Applications, Third Edition', 'Amos Gilat', 'Software', 374, 'New'),
+(116, '978-1-4343-3025-3', 'The Art & Science of Problem Solving ', 'Linda Hite-Mills', 'Misc.', 225, 'Good'),
+(117, '978-0-13-239728-5', 'Applied Numerical Analysis Using Matlab, Second Edition', 'Laurene V. Fausett', 'Mathematics', 673, 'Fair'),
+(118, '978-0-618-65731-5', 'The Knowledge of Deficit', 'E.D. Hirsch, Jr', 'Misc.', 169, 'New'),
+(119, '978-0-07-255160-0', 'Statistics for Engineers and Scientists', 'William Navidi', 'Mathematics', 869, 'Good'),
+(120, '0-13-113127-3', 'Quality Control, Seventh Edition', 'Dale H. Besterfield', 'Mathematics', 520, 'Good'),
+(121, '0-674-01325-5', 'What the Best College Teachers do', 'Ken Bain', 'Misc.', 207, 'New'),
+(122, '978-0-495-38953-8', 'Introduction to Probability & Statistics, Thirteenth Edition', 'William Mendenhall, Robert J. Beaver, Barbara M. Beaver', 'Mathematics', 746, 'Fair'),
+(123, '978-0-495-38953-8', 'Introduction to Probability & Statistics, Thirteenth Edition', 'William Mendenhall, Robert J. Beaver, Barbara M. Beaver', 'Mathematics', 746, 'Fair'),
+(124, '978-0-375-42988-0', 'Cracking the AP Calculus AB & BC Exams, 2011 Edition', 'David S. Kahn', 'Mathematics', 870, 'Fair'),
+(125, '978-0-07-337663-9', 'The Humanities Through the Arts, Eighth Edition', 'F. David Martin, Lee A. Jacobus', 'Misc.', 446, 'Fair'),
+(126, '978-1-4180-6733-5', 'Guide to Computer Forensics and Investigations, Third Edition', 'Bill Nelson, Amelia Phillips, Frank Enfinger, Christopher Steuart', 'Security', 693, 'New'),
+(127, '978-0-534-41870-0', 'Introduction to Probability and Statistics, Twelfth Edition', 'Mendenhall, Beaver, Beaver', 'Mathematics', 743, 'Good'),
+(128, '978-0-19-974450-3', 'Why Does College Cost so Much?', 'Robert B. Archibalo, David H. Feldman', 'Misc.', 289, 'New'),
+(129, '0-619-13122-5', 'Guide to Distaster Recovery', 'Michael Erbschloe', 'Recovery', 367, 'Good'),
+(130, '0-07-248575-2', 'Behavior in Organizations an Experimental Approach', 'A.B Shani, James B. Lau', 'Misc.', 490, 'Fair'),
+(131, '978-0-470-22522-6', 'Calculus II', 'Mark Zegarelli', 'Mathematics', 368, 'Good'),
+(132, '0-619-21627-1', 'Readings and Cases in the Management of Information Security', 'Michael E. Whitman, Herbert J. Mattord', 'Security', 144, 'Good'),
+(133, '0-619-21625-5', 'Principles of Information Security, Second Edition', 'Michael E. Whitman, Herbert J. Mattord', 'Security', 576, 'Fair'),
+(134, '978-0-618-64344-8', 'Precalculus, Seventh Edition', 'Larson, Hostetler', 'Mathematics', 805, 'Good'),
+(135, '0-619-21706-5', 'Guide to Computer Forensics and Investigations, Second Edition', 'Bill Nelson, Amelia Phillips, Frank Enfinger, Christopher Steuart', 'Forensics', 643, 'Good'),
+(136, '978-0-07-340268-0', 'Chemistry, Eleventh Edition', 'Raymond Chang, Kenneth A. Goldsby', 'Chemistry', 1083, 'Good'),
+(137, '0-471-17055-0', 'Elementary Linear Algebra', 'Anton', 'Mathematics', 588, 'Good'),
+(138, '978-0-321-74362-6', 'Objective-C Phrasebook', 'David Chisnall', 'Programming', 332, 'New'),
+(139, '0-07-283733-0', 'Single Variable Calculus, Second Edition', 'Robert T. Smith, Roland B. Minton', 'Mathematics', 850, 'Good'),
+(140, '1-861002-31-9', 'Professional SQL Server 7.0 Programming', 'Robert Vieira', 'Programming', 1137, 'New'),
+(141, '1-861002-70-X', 'Professional JavaScript', 'Nigel McFarlane, Andrea Chiarelli, James De Carli, Sing Li, Mark Wilcox, Paul Wilton, Cliff Wooton, Stuart Updegrave', 'Programming', 1149, 'New'),
+(142, '0-321-30427-6', 'Java Backpack Reference Guide', 'Peter J DePasquale', 'Programming', 93, 'Good'),
+(143, '1-894511-76-X', 'Maple 10 - Harnessing the Power of Mathematics', '', 'Software', 387, 'New'),
+(144, '1-894511-76-X', 'Maple 10 - Harnessing the Power of Mathematics', '', 'Software', 387, 'New'),
+(145, '0-387-00163-8', 'Pragramming Challenges', 'Steven S. Skiena, Miguel A. Revilla', 'Programming', 359, 'Good'),
+(146, '978-0-13-186333-0', 'A Practical Guide to UNIX for Mac OS X Users', 'Mark G. Sobell, Peter Seebach', 'Programming', 999, 'New'),
+(147, '978-0-321-46304-3', 'Oracle 10g Programming - A Primer', 'Rajshekhar Sunderraman', 'Programming', 525, 'New'),
+(148, '0-534-38913-9', 'Introduction to Scientific Computation and Programming', 'Daniel T. Kaplan', 'Programming', 546, 'Poor'),
+(149, '978-1-890774-56-1', 'Murachs PHP and MySQL', 'Joel Murach, Ray Harris', 'Programming', 844, 'New'),
+(150, '978-0-321-44561-2', 'The Rails Way', 'Obie Fernandez, Matt Bauer, David A. Black, Trotter Cashion, Matt Pelletier, Jodi Showers', 'Programming', 851, 'New'),
+(151, '1-55828-430-3', 'C In Plain English', 'Brian Overland', 'Programming', 418, 'New'),
+(152, '0-13-029040-8', 'UML and C++ A Practical Guide To Object-Oriented Development, Second Edition', 'Richarg C. Lee, William M. Tepfenhart', 'Programming', 557, 'Good'),
+(153, '978-0-13-284737-7', 'Data Structures And Algorithm Analysis in C++, Fourth Edition', 'Mark Allen Weiss', 'Programming', 635, 'Good'),
+(154, '0-13-038474-7', 'C++ How to Program, Fourth Edition', 'Dr. Harvey M. Deitel, Paul J. Deitel', 'Programming', 1321, 'New'),
+(155, '1-882114-85-X', 'GNU Emacs Manual, Fifteenth Edition', 'Richard M. Stallman', 'Programming', 602, 'New'),
+(156, '1-56592-001-5', 'UNIX in a Nutshell', 'Daniel Gilly', 'Programming', 0, 'Good'),
+(157, '0-7645-7077-3', 'Beginning XML, erd Edition', 'David Hunter, Andrew Watt, Jeff Rafter, Jon Duckett, Danny Ayers, Nicholas Chase, Joe Fawcett, Tom Gaven, Bill Patterson', 'Programming', 995, 'Good'),
+(158, '1-58003-038-6', 'An Introduction To Programming Using Microsoft Visual Basic .Net', 'Beth Brown, Bruce Presley', 'Programming', 0, 'Good'),
+(159, '0-262-57134-X', 'Using MPI - Portable Parallel Programming with the Message-Passing Interface, Second Edition', 'William Gropp, Ewing Lusk, Anthony Skjellum', 'Programming', 371, 'New');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkout`
+--
+
+CREATE TABLE `checkout` (
+  `checkoutID` int(11) NOT NULL,
+  `customerID` int(11) DEFAULT NULL,
+  `bookID` int(11) DEFAULT NULL,
+  `outDate` datetime DEFAULT NULL,
+  `inDate` datetime DEFAULT NULL,
+  `bookStatus` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `checkout`
+--
+
+INSERT INTO `checkout` (`checkoutID`, `customerID`, `bookID`, `outDate`, `inDate`, `bookStatus`) VALUES
+(1, 1, 1, '2017-02-22 10:16:48', NULL, NULL),
+(2, 1, 53, '2017-02-22 11:13:10', NULL, NULL),
+(3, 1, 48, '2017-02-22 11:13:14', NULL, NULL),
+(5, 1, 20, '2017-02-22 12:22:53', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `customerID` int(11) NOT NULL,
+  `FName` varchar(100) DEFAULT NULL,
+  `LName` varchar(100) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `address` varchar(300) DEFAULT NULL,
+  `birthdate` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`customerID`, `FName`, `LName`, `phone`, `address`, `birthdate`) VALUES
+(1, 'Kobe', 'Raypole', '260-450-9020', '3109 Killarney Place Fort Wayne, IN 46818', '10/16/97'),
+(2, 'Serghei', 'Mineev', '413-231-8366', '58 Lathrop St West Springfield, MA 01089', '09/17/96'),
+(3, 'Adam', 'Swanson', '(765) 250-0600', '91 McCutcheon Ct. N. Lafayette, IN 47909', '05/31/98');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`bookID`);
+
+--
+-- Indexes for table `checkout`
+--
+ALTER TABLE `checkout`
+  ADD PRIMARY KEY (`checkoutID`),
+  ADD KEY `checkout.customerID_idx` (`customerID`),
+  ADD KEY `checkout.bookID_idx` (`bookID`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`customerID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `bookID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
+--
+-- AUTO_INCREMENT for table `checkout`
+--
+ALTER TABLE `checkout`
+  MODIFY `checkoutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `customerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `checkout`
+--
+ALTER TABLE `checkout`
+  ADD CONSTRAINT `checkout.bookID` FOREIGN KEY (`bookID`) REFERENCES `books` (`bookID`),
+  ADD CONSTRAINT `checkout.customerID` FOREIGN KEY (`customerID`) REFERENCES `customers` (`customerID`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
